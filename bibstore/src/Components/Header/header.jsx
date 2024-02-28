@@ -17,10 +17,7 @@ const Header = () => {
                <div className="hedear-top-text">
                   Welcomme To Online Store
                </div>
-               <div className="hedear-top-link">
-                  <i class="bi bi-person-fill"></i>
-                  Login
-               </div>
+             
 
             </div>
 
