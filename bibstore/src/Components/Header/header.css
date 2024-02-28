@@ -1,0 +1,37 @@
+.header {
+
+    height: 250px;
+    background-color: var(--primary-color);
+    width: 100%;
+}
+
+
+
+/*Header TOP*/
+
+
+.hedear-top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    height: 20%;
+    border-bottom: 1px solid var(--main-color);
+
+}
+
+.header-top-menu{
+    display: none;
+}
+.hedear-top-phone ,
+.hedear-top-text ,
+.hedear-top-link{
+    font-size: 27px;
+    font-weight: 500;
+    color: var(--main-color);
+
+}
+.hedear-top-phone i,
+.hedear-top-link i{
+  margin-right: 5px;
+}
