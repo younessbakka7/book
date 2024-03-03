@@ -1,10 +1,11 @@
 import React from 'react';
 
-const HeaderTop = () => {
+const HeaderTop = ({setToggle,toggle}) => {
     return (
         <div className="hedear-top">
-               <div className="header-top-menu">
-                  <i class="bi bi-list"></i>
+               <div onClick={()=>setToggle(prev => !prev)} className="header-top-menu">
+                  {toggle ? <i class="bi bi-x-lg"></i> : <i class="bi bi-list"></i> }
+                  
                </div>
                <div className="hedear-top-phone">
                <i class="bi bi-telephone-fill"></i>

@@ -3,6 +3,7 @@
     height: 250px;
     background-color: var(--primary-color);
     width: 100%;
+    position: relative
 }
 
 
@@ -10,7 +11,7 @@
 /*Header TOP*/
 
 
-.hedear-top{
+.hedear-top {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -20,43 +21,52 @@
 
 }
 
-.header-top-menu{
+.header-top-menu {
     display: none;
+    color: var(--main-color);
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
 }
-.hedear-top-phone ,
-.hedear-top-text ,
-.hedear-top-link{
+
+.hedear-top-phone,
+.hedear-top-text,
+.hedear-top-link {
     font-size: 27px;
     font-weight: 500;
     color: var(--main-color);
 
 }
+
 .hedear-top-phone i,
-.hedear-top-link i{
-  margin-right: 5px;
+.hedear-top-link i {
+    margin-right: 5px;
 }
 
 /* hedear-middel*/
 
-.hedear-middel{
+.hedear-middel {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 30px;
     height: 50%;
 }
-.hedear-middel-logo{
-color: var(--main-color);
-font-size: 25px;
-text-decoration: none;
-display: flex;
-align-items: center;
+
+.hedear-middel-logo {
+    color: var(--main-color);
+    font-size: 25px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
 }
-.hedear-middel-logo i{
- margin: 0 6px;
- font-size: 40px;
+
+.hedear-middel-logo i {
+    margin: 0 6px;
+    font-size: 40px;
 }
-.hedear-middel-search-box{
+
+.hedear-middel-search-box {
     width: 700px;
     background-color: var(--main-color);
     height: 60px;
@@ -65,7 +75,8 @@ align-items: center;
     position: relative;
 
 }
-.hedear-middel-search-input{
+
+.hedear-middel-search-input {
     width: 100%;
     height: 100%;
     border: none;
@@ -73,7 +84,8 @@ align-items: center;
     padding-left: 25px;
 
 }
-.hedear-middel-search-box .bi-search{
+
+.hedear-middel-search-box .bi-search {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -82,8 +94,130 @@ align-items: center;
     color: gray;
 }
 
-.hedear-middel-cart-car-wrapper{
+.hedear-middel-cart-car-wrapper {
     color: var(--main-color);
     font-size: 44px;
+}
 
+/*navbar*/
+
+.navbar {
+
+    background-color: var(--main-color);
+    box-shadow: 0 0 1px 1px;
+    height: 30%;
+    display: flex;/*ul center*/
+    align-items: center;/*ul center*/
+    justify-content: center;/*ul center*/
+}
+
+.navbar-links {
+
+    display: flex;/*display item item item*/
+    justify-content: center;/*center*/
+    height: 100%;
+}
+
+.navbar-link {
+    padding: 0 20px; /*gap betwen items*/
+    font-size: 21px;
+    font-weight: 600;
+    color: #525452;
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    transition: 0.5s; /*hover no3oma*/
+}
+
+.navbar-link:hover {
+    background-color: snow;
+}
+
+/*media Queries*/
+
+@media (max-width:990px) {
+    .hedear-middel-search-box {
+        width: 600px;
+
+    }
+}
+
+@media (max-width:920px) {
+    .hedear-middel-search-box {
+        width: 450px;
+
+    }
+
+    .hedear-top-text,
+    .hedear-top-phone,
+    .hedear-top-link {
+        font-size: 17px;
+
+
+    }
+
+    .hedear-middel-logo {
+        font-size: 17px;
+        font-weight: 400;
+    }
+}
+
+
+@media (max-width:720px) {
+    .hedear-top-text {
+        display: none;
+    }
+
+    .header-top-menu {
+        display: block;
+    }
+
+
+    .hedear-middel {
+        flex-wrap: wrap;
+        padding: 0 30px;
+        height: 80%;
+    }
+
+    .hedear-middel-search-box {
+        width: 100%;
+    }
+
+    .hedear-middel-logo {
+        display: none;
+    }
+
+    .navbar {
+        position: fixed;
+        top: 50px;
+        left: -300px;
+        width: 300px;
+        height: 100vh;
+        align-items: flex-start;
+        z-index: 999;
+        transition: all 1s ease;
+
+    }
+
+    .navbar-links {
+        flex-direction: column;/*item retour athor line item (wahed te7t wahed)*/
+        justify-content: center;
+        align-items: flex-start;
+        height: max-content;
+        width: 100%;
+    }
+
+    .navbar-link {
+        padding: 20px;
+    }
+
+}
+@media (max-width:520px) {
+    .hedear-middel,.hedear-top{
+        padding: 0 15px;
+    }
+    .hedear-top-phone{
+        font-size: 15px;
+    }
 }
