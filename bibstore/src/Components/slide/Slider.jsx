@@ -21,8 +21,9 @@ const Slider = () => {
     }
     return (
         <div  className="slide-container">
-            {Slideindex !== 0 && <i onClick={()=>{Handlclick("left")}} class="bi bi-chevron-double-left chev-left"></i>}
-           
+          {Slideindex !== 0 &&  <i onClick={() => {Handlclick("left")}} class="bi bi-chevron-double-left chev-left"></i>} 
+        
+          
           <div style={{transform :`translateX(${Slideindex * -100}vw)`}} className="slide-wraper">  {/*transletX t7rik lyamin awe yassar 3la hassab l9ima lifih (9ima)*/}
          
                 <div className="slide  first-slide">
@@ -55,8 +56,8 @@ const Slider = () => {
                     </div>
                 </div>
             </div>
+            {Slideindex !== 2 && <i onClick={() => {Handlclick("right")}} class="bi bi-chevron-double-right chev-right"></i>}
             
-            {Slideindex !== 2 && <i onClick={()=>{Handlclick("right")}} class="bi bi-chevron-double-right chev-right"></i>}
             
 
 

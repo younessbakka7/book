@@ -13,7 +13,7 @@ const Header = () => {
        <header className="header">
           
 
-        <HeaderTop setToggle={setToggle}/>
+        <HeaderTop setToggle={setToggle} toggle={toggle}/>
         <HeaderMiddle/>
    
         <Navbar toggle={toggle} setToggle={setToggle}  />

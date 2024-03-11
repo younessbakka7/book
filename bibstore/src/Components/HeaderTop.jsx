@@ -4,7 +4,7 @@ const HeaderTop = ({setToggle,toggle}) => {
     return (
         <div className="hedear-top">
                <div onClick={()=>setToggle(prev => !prev)} className="header-top-menu">
-                  {toggle ? <i class="bi bi-x-lg"></i> : <i class="bi bi-list"></i> }
+                  { toggle ? <i class="bi bi-x-lg"></i> : <i class="bi bi-list"></i> }
                   
                </div>
                <div className="hedear-top-phone">
