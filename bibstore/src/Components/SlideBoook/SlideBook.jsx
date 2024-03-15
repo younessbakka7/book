@@ -3,9 +3,25 @@ import "./SlideBook.css"
 
 import { useState } from "react";
 import Rating from "./Rating.jsx";
+import Modal from "../Modal/Modal.jsx";
 
 const SlideBook = ({data}) => {
-    
+  //modal//
+  const [openModal, setOpenModal] = useState(false);
+  const [dataBook, setDatabook] = useState(null);
+
+  const handleModal = (book) => {
+    setOpenModal(true)
+    setDatabook(book)
+    console.log(book)
+
+  }
+
+
+
+
+
+    //slide//
     const [Slidebook, setSlidebook] = useState(0);
     const HandleClick = (direction) => {
         if(direction === "left"){
@@ -27,10 +43,10 @@ const SlideBook = ({data}) => {
                <div key={item.id} className="book-slide-item">
                <img src={`./books/${item.image}`} alt={item.title}  className='book-slide-item-img' />
                <h3 className='book-slide-item-title'>{item.title}</h3>
-                 <Rating rating={item.rating} reviews={item.reviews}/>
+               <Rating rating={item.rating} reviews={item.reviews}/> 
                <p className='book-slide-item-price'>${item.price}</p>
                <div className="book-slide-item-icon">
-               <i class="bi bi-eye icon-show"></i>
+               <i onClick={(params) => {handleModal(item)}} class="bi bi-eye icon-show"></i>
                <i class="bi bi-cart-check-fill icon-add-cart"></i>
                </div>
 
@@ -38,9 +54,9 @@ const SlideBook = ({data}) => {
             )}
 
             </div>
-            {Slidebook <= data.length - 1 &&  <i  onClick={() => {HandleClick("jkgjgkjhng")}} class="bi bi-chevron-right chev-slid-book-right"></i> }
-         
-
+            {Slidebook <= data.length - 1 &&  <i  onClick={() => {HandleClick("right")}} class="bi bi-chevron-right chev-slid-book-right"></i> }
+      {openModal && <Modal setOpenModal={setOpenModal} dataBook={dataBook}  />}
+        
         
             
     </div>

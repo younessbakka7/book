@@ -1,0 +1,237 @@
+.modal-container {
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(0, 0, 0, 0.7);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  width: 50%;
+  height: 60%;
+  background-color: white;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 30px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.modal-icon {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  cursor: pointer;
+  font-size: 40px;
+  border-radius: 50%;
+}
+
+/*popap*/
+
+.model-content-info-img{
+  padding: 20px;
+  width: 40%;
+  height:100%;
+  border-radius: 15PX;
+
+ 
+}
+
+.model-content-info h5{
+font-size: 30px;
+padding: 40px 0;
+font-weight: 900;
+}
+
+.model-content-info-stock{
+font-size: 17px;
+padding: 0px 0 10px 0;
+color: black;
+}
+
+.model-content-info-Authors{
+  padding: 10px 0 10px 0;
+  font-size: 21px;
+  
+}
+.model-content-info-Authors b{
+  color: rgb(120, 165, 120);
+  font-size:17px ;
+  font-weight: 700;
+}
+
+.model-content-info-price{
+  font-size: 17px;
+padding: 0px 0 10px 0;
+color: black;
+}
+
+.model-content-info-price b{
+  color:crimson;
+  font-size:17px ;
+  font-weight: 700;
+}
+.model-content-info-add-card{
+
+  width: 100%;
+  height: 100%;
+  padding: 10px 0 10px 0;
+}
+.Modal-add-to-card-input{
+  height: 29px;
+  width: 35%;
+  border-radius: 10px;
+}
+.Modal-add-to-card-btn{
+  margin: 0 10px;
+  border: 1px solid #4f814f;
+  padding: 2px 10px 5px 10px;
+  border-radius: 5px;
+  background-color: transparent;
+  font-size: 13px;
+  font-weight: 700;
+  color: #4f814f;
+}
+
+.model-content-info-link{
+  margin: 10px 0 0 0 ;
+  width: 70%;
+  height: 50px;
+  background-color: rgb(89, 89, 177);
+  color: white;
+ padding: 10px 20px 10px 10px;
+ border-radius: 10px;
+ font-weight: 600;
+ font-size: 17px;
+ text-align: center;
+ cursor: pointer;
+ transition: 0.5s;
+}
+
+.model-content-info-link:hover{
+ background-color: rgb(119, 119, 202); ;
+}
+/* MEDIA QUERIES*/
+
+
+
+@media (max-width :1490px ) {
+
+  .model-content-info h5{
+
+    font-size: 27px;
+    padding: 37px 0;
+    font-weight: 700;
+    }
+  .model-content-info-img{
+    padding: 10px;
+    width: 50%;
+    height:90%;
+   
+  
+   
+  }
+  
+}
+
+
+@media (max-width :990px ) {
+  .model-content-info h5{
+
+    font-size: 25px;
+    padding: 35px 0;
+    font-weight: 600;
+    }
+  .model-content-info-img{
+display: none;
+  }
+
+  .model-content-info-add-card{
+
+    width: 90%;
+    height: 90%;
+    padding: 10px 0 10px 0;
+
+  }
+  .Modal-add-to-card-btn{
+    margin: 0 5px;
+    padding: 2px 5px 5px 5px;
+
+  }
+  .model-content-info-link{
+    margin: 7px 0 0 0 ;
+    width: 60%;
+    height: 40px;
+    background-color: rgb(89, 89, 177);
+    
+   padding: 5px 10px 5px5px;
+   border-radius: 8px;
+   font-weight: 500;
+   font-size: 13px;
+   text-align: center;
+   
+  
+
+  }
+  .Modal-add-to-card-input{
+    width: 25%;
+    height: 25px;
+    margin: 7px 0 0 0 ;
+ 
+
+  }
+
+  
+}
+
+@media (max-width : 617px ) {
+
+  .model-content-info h5{
+    font-size: 20px;
+    padding: 25px 0;
+    font-weight: 300;
+    }
+  .model-content-info-link{
+    margin: 6px 0 0 0 ;
+    width: 70%;
+    height: 41px;
+    background-color: rgb(89, 89, 177);
+    
+   padding: 2px 4px 4px 4px;
+   border-radius: 7px;
+   font-weight: 400;
+   font-size: 13px;
+   text-align: center;
+   
+  
+
+  }
+
+ 
+  .Modal-add-to-card-btn{
+    margin: 0 5px;
+    padding: 2px 5px 5px 5px;
+    margin: 7px 0 7px 0 ;
+    height: 30px;
+    width:80%;
+    font-size: 10px;
+
+  }
+  .Modal-add-to-card-input{
+    width: 80%;
+    height: 25px;
+    margin: 7px 0 12px 0 ;
+    border: 1px solid gray;
+ 
+
+  }
+
+  
+}
