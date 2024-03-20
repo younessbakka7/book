@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {Link} from "react-router-dom"
 const HeaderTop = ({setToggle,toggle}) => {
     return (
         <div className="hedear-top">
@@ -14,10 +14,10 @@ const HeaderTop = ({setToggle,toggle}) => {
                <div className="hedear-top-text">
                   Welcomme To Online Store
                </div>
-               <div className="hedear-top-link">
+               <Link to={"/login"} className="hedear-top-link">
                   <i class="bi bi-person-fill"></i>
                   Login
-               </div>
+               </Link>
 
             </div>
     );

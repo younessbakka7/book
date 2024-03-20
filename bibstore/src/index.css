@@ -28,3 +28,24 @@ ul {
 input:focus{
   outline:none;
 }
+
+
+::-webkit-scrollbar {
+  width: 12px; 
+
+}
+
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+
+}
+
+
+::-webkit-scrollbar-thumb {
+  background:rgb(60, 60, 106) ;
+  border-radius: 10px;
+  
+}
+
+

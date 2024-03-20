@@ -1,14 +1,16 @@
 import React from 'react';
 
+import {Link} from "react-router-dom"
+
 const HeaderMiddle = () => {
     return (
         <div className="hedear-middel">
 
-        <div className="hedear-middel-logo">
+        <Link to={"/"} className="hedear-middel-logo">
           <b>Book</b>  
           <i class="bi bi-book"></i>
           <b>Store</b>
-        </div>
+        </Link>
 
 
         <div className="hedear-middel-search-box">
@@ -19,9 +21,9 @@ const HeaderMiddle = () => {
         </div>
 
 
-        <div className="hedear-middel-cart-car-wrapper">
+        <Link to={"/cart"} className="hedear-middel-cart-car-wrapper">
           <i className="bi bi-cart2"></i>
-        </div>
+        </Link>
        
 
 

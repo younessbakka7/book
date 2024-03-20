@@ -1,8 +1,9 @@
 import React from 'react';
 import "./Modal.css"
+import {Link, link} from "react-router-dom"
 import Rating from '../SlideBoook/Rating';
 const Modal = ({ dataBook, setOpenModal }) => {
-   const { image, title, inStock, author, rating, reviews, price } = dataBook
+   const { image, title, inStock, author, rating, reviews, price,id } = dataBook
    return (
       <div onClick={() => { setOpenModal(false) }} className="modal-container">
          <div onClick={(event) => { event.stopPropagation() }} className="modal-content">
@@ -31,9 +32,9 @@ const Modal = ({ dataBook, setOpenModal }) => {
                   <button className='Modal-add-to-card-btn'>   <i className="bi bi-cart-plus"></i> Add To Card</button>
                </div>
 
-               <div className="model-content-info-link">
+               <Link to={`/Book/${id}`} className="model-content-info-link">
                   see you more
-               </div>
+               </Link>
 
 
             </div>

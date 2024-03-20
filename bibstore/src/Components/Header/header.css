@@ -119,6 +119,7 @@
 }
 
 .navbar-link {
+    text-decoration: none;
     padding: 0 20px; /*gap betwen items*/
     font-size: 21px;
     font-weight: 600;
@@ -128,6 +129,11 @@
     display: flex;
     align-items: center;
     transition: 0.5s; /*hover no3oma*/
+}
+.hedear-top-link {
+    text-decoration: none;
+
+
 }
 
 .navbar-link:hover {
