@@ -40,12 +40,13 @@ const Cart = () => {
 
                          <b>  price :  </b>  <b className='price-cart'>${item.price * item.quantity}</b>
 
-                     
+                        
          
                             </div>
+                            <i class="bi bi-trash-fill delet-cart"></i>
 
                             
-                            <i class="bi bi-trash-fill delet-cart"></i>
+                           
                          
                            </div>
                            

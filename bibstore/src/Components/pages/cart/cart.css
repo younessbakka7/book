@@ -127,3 +127,41 @@
 
 
 }
+
+/*MEDIA QUERIES*/
+
+@media (max-width : 990px) {
+    .cart-item-info {
+        width: 100%;
+        text-align: center;
+    }
+
+    .cart-warapper {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .cart-item {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+
+    .cart-info-summary {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .cart-quantitiy {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+}
+
+@media (max-width:400px) {
+    .cart-item-info {
+        width: 100%;
+        text-align: center;
+    }
+}
