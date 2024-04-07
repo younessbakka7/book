@@ -31,14 +31,14 @@ input:focus{
 
 
 ::-webkit-scrollbar {
-  width: 12px; 
+  width: 6px; 
 
 }
 
 
 ::-webkit-scrollbar-track {
   background: #f1f1f1; 
-
+  width: 10px;
 }
 
 

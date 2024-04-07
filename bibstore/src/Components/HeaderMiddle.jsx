@@ -1,8 +1,14 @@
 import React from 'react';
+import {useContext} from 'react';
 
 import {Link} from "react-router-dom"
 
+//notification
+
+import cartcontext from '../context/cartcontext'
+
 const HeaderMiddle = () => {
+  const { itemlenght } = useContext(cartcontext);
     return (
         <div className="hedear-middel">
 
@@ -22,6 +28,10 @@ const HeaderMiddle = () => {
 
 
         <Link to={"/cart"} className="hedear-middel-cart-car-wrapper">
+          {itemlenght>0 &&
+          <b className='notification'>{itemlenght}</b>
+          }
+          
           <i className="bi bi-cart2"></i>
         </Link>
        

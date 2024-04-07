@@ -1,9 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./Modal.css"
 import {Link, link} from "react-router-dom"
 import Rating from '../SlideBoook/Rating';
+import {useContext} from 'react';
+
+//add item in cart
+import cartitem from '../../context/cartcontext';
+
+
+
 const Modal = ({ dataBook, setOpenModal }) => {
+
+   //quantity
+   const [qty, setQty] = useState(1);
+ 
    const { image, title, inStock, author, rating, reviews, price,id } = dataBook
+   const { Additem } = useContext(cartitem);
    return (
       <div onClick={() => { setOpenModal(false) }} className="modal-container">
          <div onClick={(event) => { event.stopPropagation() }} className="modal-content">
@@ -28,8 +40,8 @@ const Modal = ({ dataBook, setOpenModal }) => {
                </div>
 
                <div className="model-content-info-add-card">
-                  <input type="number" min={1} max={100} className='Modal-add-to-card-input' />
-                  <button className='Modal-add-to-card-btn'>   <i className="bi bi-cart-plus"></i> Add To Card</button>
+                  <input type="number" min={1} max={100} value={qty} onChange={e=>setQty(e.target.value)} className='Modal-add-to-card-input' />
+                  <button onClick={() => Additem({...dataBook, quantity:qty})}  className='Modal-add-to-card-btn'>   <i className="bi bi-cart-plus"></i> Add To Card</button>
                </div>
 
                <Link to={`/Book/${id}`} className="model-content-info-link">
@@ -55,7 +67,7 @@ const Modal = ({ dataBook, setOpenModal }) => {
 
 
 
-            <p>lo</p>
+          
          </div>
 
       </div>

@@ -71,9 +71,9 @@
     color: green;
     background-color: transparent;
     font-size: 17px;
-    padding: 10px;
+    padding: 12px;
     border-radius: 10px;
-    width: 35%;
+    width: 40%;
     cursor: pointer;
     transition: 0.5s;
 }
@@ -82,8 +82,8 @@
 }
 
 .book-content-description{
-    width:80%;
-    font-size: 21px;
+    width:100%;
+    font-size: 17px;
     line-height: 1.8;
  
 }
@@ -92,21 +92,21 @@
     gap: 10px;
     align-items: center;
     justify-content: center;
-    margin-top: 20px;
-    font-size: 23px;
+   
+    
 }
 
 .print-length small,
 .Language small,
 .Publication-Date small{
     color: rgb(37, 37, 172);
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 600;
     margin-right: 10px;
 }
 
 .icon-show-book{
-    font-size: 30px;
+    font-size: 25px;
     color: var(--primary-color);
 }
 
@@ -134,4 +134,7 @@
     margin-top: 10px;
     color: crimson;
     font-size: 20px;
+}
+.cart-plus{
+  border: none;
 }

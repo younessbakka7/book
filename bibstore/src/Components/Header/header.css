@@ -95,8 +95,25 @@
 }
 
 .hedear-middel-cart-car-wrapper {
+    position: relative;
     color: var(--main-color);
     font-size: 44px;
+}
+
+.notification{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 15px;
+    background-color: rgb(240, 105, 8);
+    color: white;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 
 /*navbar*/

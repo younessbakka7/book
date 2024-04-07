@@ -1,11 +1,17 @@
 
 import "./SlideBook.css"
 
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Rating from "./Rating.jsx";
 import Modal from "../Modal/Modal.jsx";
+import cartcontext from "../../context/cartcontext";
 
 const SlideBook = ({data}) => {
+
+  //usecontexte pour add-tem-to-card
+  const { Additem } = useContext(cartcontext)
+  //quantity
+  const [quantity, setQuantity] = useState(1);
   //modal//
   const [openModal, setOpenModal] = useState(false);
   const [dataBook, setDatabook] = useState(null);
@@ -47,7 +53,7 @@ const SlideBook = ({data}) => {
                <p className='book-slide-item-price'>${item.price}</p>
                <div className="book-slide-item-icon">
                <i onClick={(params) => {handleModal(item)}} class="bi bi-eye icon-show"></i>
-               <i class="bi bi-cart-check-fill icon-add-cart"></i>
+               <i onClick={() =>Additem({...item, quantity}) } class="bi bi-cart-check-fill icon-add-cart"></i>
                </div>
 
                </div>
