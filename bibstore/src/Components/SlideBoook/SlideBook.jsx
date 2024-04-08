@@ -19,7 +19,7 @@ const SlideBook = ({data}) => {
   const handleModal = (book) => {
     setOpenModal(true)
     setDatabook(book)
-    console.log(book)
+  
 
   }
 
@@ -52,7 +52,7 @@ const SlideBook = ({data}) => {
                <Rating rating={item.rating} reviews={item.reviews}/> 
                <p className='book-slide-item-price'>${item.price}</p>
                <div className="book-slide-item-icon">
-               <i onClick={(params) => {handleModal(item)}} class="bi bi-eye icon-show"></i>
+               <i onClick={() => {handleModal(item)}} class="bi bi-eye icon-show"></i>
                <i onClick={() =>Additem({...item, quantity}) } class="bi bi-cart-check-fill icon-add-cart"></i>
                </div>
 
