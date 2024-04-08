@@ -1,0 +1,28 @@
+.about {
+    height: calc(90vh - 250px);
+    padding: 50px;
+  
+}
+
+.title-about {
+    color: rgb(182, 173, 173);
+    font-size: 44px;
+    border-bottom: 5px solid rgb(182, 173, 173);
+    width: fit-content;
+    margin-bottom: 30px;
+    font-weight: bold;
+
+
+}
+
+.texte-about {
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.version-about {
+    font-weight: 900;
+    font-size: 25px;
+    margin-top: 30px;
+}
