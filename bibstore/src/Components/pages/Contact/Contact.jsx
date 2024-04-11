@@ -1,8 +1,31 @@
 import React from 'react';
 import './Contact.css'
-const Contact = () => {
+import { useState} from 'react'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+const Contact = () => { 
+    const [Email, setEmail] = useState("");
+const [Nom, setNom] = useState("");
+const [Prenom, setPrenom] = useState("");
+    const handlesubmit = (e) => {
+        e.preventDefault();
+     
+        if (Nom.trim() === "") return toast.error("Nom is required ");
+        if (Prenom.trim() === "") return toast.error("Password is required ");
+        if (Email.trim() === "") return toast.error("Email is required");
+
+
+
+
+       
+
+
+
+    }
     return (
         <div className='contact'>
+              <ToastContainer  />
 
             <div className='contact-wrapper'>
 
@@ -40,14 +63,12 @@ const Contact = () => {
                 </div>
 
             </div>
-            <form onSubmit={(e) => {
-                e.preventDefault()
-            }} className='form-contact'>
+            <form onSubmit={handlesubmit} className='form-contact'>
                 <h2 className='contact-title-form'>Contact Us Form</h2>
                 <div className='form-input'>
-                <input  type="text" placeholder='Nom *' />
-                <input type="text" placeholder='Prenom *' />
-                <input type="text" placeholder='Email *'  />
+                <input  type="text" placeholder='Nom *'  value={Nom} onChange={e => setNom(e.target.value)}  />
+                <input type="text" placeholder='Prenom *'  value={Prenom} onChange={e => setPrenom(e.target.value)}  />
+                <input type="text" placeholder='Email *'  value={Email} onChange={e => setEmail(e.target.value)}   />
                 </div>
            
              <div className='form-input-aria'>
